@@ -331,77 +331,91 @@
             justify-content: center;
         }
 
-        .meditation-circle {
+        .meditation-image-wrapper {
             position: relative;
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--sage) 0%, var(--soft-blue) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 30px 60px var(--shadow);
-            animation: pulse 4s ease-in-out infinite;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+            animation: floatImage 6s ease-in-out infinite;
         }
 
-        @keyframes pulse {
+        @keyframes floatImage {
             0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 30px 60px var(--shadow);
+                transform: translateY(0) scale(1);
             }
             50% {
-                transform: scale(1.05);
-                box-shadow: 0 40px 80px var(--shadow);
+                transform: translateY(-20px) scale(1.02);
             }
         }
 
-        .meditation-circle::before,
-        .meditation-circle::after {
+        .meditation-image-wrapper::before,
+        .meditation-image-wrapper::after {
             content: '';
             position: absolute;
             border-radius: 50%;
             border: 2px solid var(--sage);
             opacity: 0.3;
+            z-index: -1;
         }
 
-        .meditation-circle::before {
-            width: 500px;
-            height: 500px;
+        .meditation-image-wrapper::before {
+            width: 520px;
+            height: 520px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             animation: ripple 3s ease-out infinite;
         }
 
-        .meditation-circle::after {
-            width: 600px;
-            height: 600px;
+        .meditation-image-wrapper::after {
+            width: 560px;
+            height: 560px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             animation: ripple 3s ease-out infinite 1.5s;
         }
 
         @keyframes ripple {
             0% {
-                transform: scale(0.8);
+                transform: translate(-50%, -50%) scale(0.9);
                 opacity: 0.5;
             }
             100% {
-                transform: scale(1);
+                transform: translate(-50%, -50%) scale(1);
                 opacity: 0;
             }
         }
 
-        .zen-symbol {
-            font-size: 8rem;
-            color: white;
-            opacity: 0.9;
-            animation: rotateZen 20s linear infinite;
-            display: inline-block;
+        .meditation-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomIn 1s ease-out;
         }
 
-        @keyframes rotateZen {
+        @keyframes zoomIn {
             from {
-                transform: rotate(0deg);
+                opacity: 0;
+                transform: scale(0.8);
             }
             to {
-                transform: rotate(360deg);
+                opacity: 1;
+                transform: scale(1);
             }
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(156, 175, 136, 0.2) 0%, rgba(184, 212, 232, 0.2) 100%);
+            mix-blend-mode: overlay;
+            pointer-events: none;
         }
 
         /* Features Section */
@@ -942,8 +956,11 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="meditation-circle">
-                    <span class="zen-symbol">☯</span>
+                <div class="meditation-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=800&fit=crop&q=80" 
+                         alt="Person meditating in peaceful nature" 
+                         class="meditation-image">
+                    <div class="image-overlay"></div>
                 </div>
             </div>
         </section>
