@@ -175,6 +175,15 @@
             font-weight: 300;
             letter-spacing: 2px;
             color: var(--deep-green);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            color: var(--sage);
         }
 
         .nav-links {
@@ -771,6 +780,13 @@
             letter-spacing: 2px;
             margin-bottom: 1rem;
             animation: fadeIn 1s ease both;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo .logo-icon {
+            color: white;
         }
 
         .footer-tagline {
@@ -879,37 +895,93 @@
 
         /* Responsive */
         @media (max-width: 968px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
             .hero {
                 grid-template-columns: 1fr;
                 text-align: center;
+                padding: 4rem 0 3rem;
             }
 
             .hero-content h1 {
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
 
             .hero-content p {
                 max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .cta-buttons {
                 justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-visual {
+                height: 400px;
+                margin-top: 3rem;
+            }
+
+            .meditation-image-wrapper {
+                width: 350px;
+                height: 350px;
+            }
+
+            .meditation-image-wrapper::before {
+                width: 370px;
+                height: 370px;
+            }
+
+            .meditation-image-wrapper::after {
+                width: 400px;
+                height: 400px;
             }
 
             .features-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats {
+                border-radius: 30px;
+                padding: 4rem 2rem;
             }
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .stat-item h4 {
+                font-size: 3rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .final-cta h2 {
+                font-size: 2.5rem;
             }
 
             .nav-links {
                 display: none;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .logo-icon {
+                width: 28px;
+                height: 28px;
             }
 
             .footer-content {
@@ -921,6 +993,142 @@
                 flex-direction: column;
                 gap: 0.5rem;
                 text-align: center;
+            }
+
+            .blob-1, .blob-2, .blob-3 {
+                filter: blur(40px);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 0.9rem 2rem;
+                font-size: 0.95rem;
+            }
+
+            .meditation-image-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+
+            .meditation-image-wrapper::before {
+                width: 300px;
+                height: 300px;
+            }
+
+            .meditation-image-wrapper::after {
+                width: 330px;
+                height: 330px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .feature-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stat-item h4 {
+                font-size: 2.5rem;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .final-cta p {
+                font-size: 1.1rem;
+            }
+
+            .testimonial-card {
+                padding: 2rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .logo-icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            header {
+                padding: 1.5rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .meditation-image-wrapper {
+                width: 240px;
+                height: 240px;
+            }
+
+            .meditation-image-wrapper::before {
+                width: 260px;
+                height: 260px;
+            }
+
+            .meditation-image-wrapper::after {
+                width: 290px;
+                height: 290px;
+            }
+
+            .hero-visual {
+                height: 300px;
+            }
+
+            .feature-icon {
+                font-size: 2.5rem;
+            }
+
+            .feature-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .stats {
+                padding: 3rem 1.5rem;
+            }
+
+            .final-cta {
+                padding: 4rem 0;
             }
         }
     </style>
@@ -948,7 +1156,17 @@
     <div class="container">
         <header>
             <nav>
-                <div class="logo">SERENITY</div>
+                <div class="logo">
+                    <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C12 2 8 6 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 6 12 2 12 2Z" fill="currentColor" opacity="0.7"/>
+                        <path d="M7 10C7 10 3 12 3 15C3 16.66 4.34 18 6 18C7.66 18 9 16.66 9 15C9 12 7 10 7 10Z" fill="currentColor" opacity="0.5"/>
+                        <path d="M17 10C17 10 21 12 21 15C21 16.66 19.66 18 18 18C16.34 18 15 16.66 15 15C15 12 17 10 17 10Z" fill="currentColor" opacity="0.5"/>
+                        <path d="M12 14C12 14 9 16 9 19C9 20.66 10.34 22 12 22C13.66 22 15 20.66 15 19C15 16 12 14 12 14Z" fill="currentColor"/>
+                        <path d="M4 16C4 16 2 17 2 18.5C2 19.33 2.67 20 3.5 20C4.33 20 5 19.33 5 18.5C5 17 4 16 4 16Z" fill="currentColor" opacity="0.4"/>
+                        <path d="M20 16C20 16 22 17 22 18.5C22 19.33 21.33 20 20.5 20C19.67 20 19 19.33 19 18.5C19 17 20 16 20 16Z" fill="currentColor" opacity="0.4"/>
+                    </svg>
+                    <span>SERENITY</span>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#features">Features</a></li>
@@ -1076,7 +1294,17 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">SERENITY</div>
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C12 2 8 6 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 6 12 2 12 2Z" fill="currentColor" opacity="0.7"/>
+                            <path d="M7 10C7 10 3 12 3 15C3 16.66 4.34 18 6 18C7.66 18 9 16.66 9 15C9 12 7 10 7 10Z" fill="currentColor" opacity="0.5"/>
+                            <path d="M17 10C17 10 21 12 21 15C21 16.66 19.66 18 18 18C16.34 18 15 16.66 15 15C15 12 17 10 17 10Z" fill="currentColor" opacity="0.5"/>
+                            <path d="M12 14C12 14 9 16 9 19C9 20.66 10.34 22 12 22C13.66 22 15 20.66 15 19C15 16 12 14 12 14Z" fill="currentColor"/>
+                            <path d="M4 16C4 16 2 17 2 18.5C2 19.33 2.67 20 3.5 20C4.33 20 5 19.33 5 18.5C5 17 4 16 4 16Z" fill="currentColor" opacity="0.4"/>
+                            <path d="M20 16C20 16 22 17 22 18.5C22 19.33 21.33 20 20.5 20C19.67 20 19 19.33 19 18.5C19 17 20 16 20 16Z" fill="currentColor" opacity="0.4"/>
+                        </svg>
+                        <span>SERENITY</span>
+                    </div>
                     <p class="footer-tagline">Find your inner peace, one breath at a time.</p>
                     <div class="social-links">
                         <a href="https://facebook.com" target="_blank" aria-label="Facebook">
@@ -1136,7 +1364,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Serenity. All rights reserved.</p>
-                <p>Made by mishal raja</p>
+                <p>Made by mishal raja 💚 </p>
             </div>
         </div>
     </footer>
