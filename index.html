@@ -687,6 +687,15 @@
             font-weight: 600;
             font-size: 1.1rem;
             animation: pulseGlow 2s ease-in-out infinite;
+            overflow: hidden;
+            border: 2px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         @keyframes pulseGlow {
@@ -938,6 +947,7 @@
             <nav>
                 <div class="logo">SERENITY</div>
                 <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#pricing">Pricing</a></li>
@@ -1014,7 +1024,9 @@
                     <div class="quote-icon">"</div>
                     <p class="testimonial-text">Serenity has completely transformed my morning routine. The guided sessions help me start each day with clarity and purpose.</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Martinez">
+                        </div>
                         <div class="author-info">
                             <h4>Sarah Martinez</h4>
                             <p>Marketing Director</p>
@@ -1025,7 +1037,9 @@
                     <div class="quote-icon">"</div>
                     <p class="testimonial-text">As someone who struggled with anxiety, this app has been a game-changer. The breathing exercises are incredibly effective.</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">JC</div>
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Chen">
+                        </div>
                         <div class="author-info">
                             <h4>James Chen</h4>
                             <p>Software Engineer</p>
@@ -1036,7 +1050,9 @@
                     <div class="quote-icon">"</div>
                     <p class="testimonial-text">The soundscapes are beautifully crafted. I use them every night to wind down, and my sleep quality has improved dramatically.</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">EP</div>
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Patel">
+                        </div>
                         <div class="author-info">
                             <h4>Emma Patel</h4>
                             <p>Yoga Instructor</p>
