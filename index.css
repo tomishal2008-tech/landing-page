@@ -914,7 +914,8 @@
 
                         .testimonials-grid { 
                             grid-template-columns: 1fr; } 
-                            .section-title { 
+ }
+.section-title { 
                                 font-size: 2.5rem; } 
                                 .final-cta h2 { 
                                     font-size: 2.5rem; }
@@ -935,7 +936,6 @@
                 gap: 0.5rem; 
                 text-align: center; }
             .blob-1, .blob-2, .blob-3 { filter: blur(40px); } 
-        } 
         @media (max-width: 640px) { 
             .hero-content h1 { 
                 font-size: 2.5rem; 
