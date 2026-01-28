@@ -958,31 +958,27 @@
             .stat-item h4 {
                 font-size: 3rem;
             }
-           /* Mobile swipe testimonials */
-@media (max-width: 768px) {
-    .swipe-container {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 1.5rem;
-        padding-bottom: 1rem;
-        -webkit-overflow-scrolling: touch;
+            /* ===== MOBILE SWIPE ===== */
+@media(max-width:768px){
+
+    .testimonials-grid.swipe-container{
+        display:flex;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        gap:1.5rem;
+        padding-bottom:1rem;
     }
 
-    .swipe-item {
-        min-width: 85%;
-        scroll-snap-align: center;
-        flex-shrink: 0;
+    .testimonial-card.swipe-item{
+        min-width:85%;
+        scroll-snap-align:center;
+        flex-shrink:0;
     }
 
-    .swipe-container::-webkit-scrollbar {
-        display: none;
+    .testimonials-grid::-webkit-scrollbar{
+        display:none;
     }
 }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
 
             .section-title {
                 font-size: 2.5rem;
